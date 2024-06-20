@@ -1,5 +1,24 @@
 public abstract class Arbol {
-    public abstract void enOrden(int dato);
-    public abstract void preOrden(int dato);
-    public abstract void postOrden(int dato);
+    protected NodoArbol nodoRaiz;
+
+    public abstract void enOrden();
+
+    public abstract void postOrden();
+
+    public abstract void preOrden();
+
+    public void ingresarValor(Object valor) {
+        if (nodoRaiz == null) {
+            nodoRaiz = new NodoArbol(valor);
+        } else {
+            nodoRaiz.ingresarValor(valor);
+        }
+    }
+
+    public NodoArbol posicionNodo(Object valor) {
+        if (nodoRaiz != null) {
+            return nodoRaiz.posicionNodo(valor);
+        }
+        return null;
+    }
 }

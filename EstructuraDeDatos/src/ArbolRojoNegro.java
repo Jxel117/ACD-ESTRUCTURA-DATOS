@@ -1,32 +1,37 @@
-public class ArbolRojoNegro extends Arbol{
-    private String colorNodo;
-    private String altura;
+public class ArbolRojoNegro extends Arbol {
+    public String colorNodo;
+    public String altura;
 
     public void marcarNodoNegro() {
 
     }
+
     public void marcarNodoRojo() {
 
     }
+
     public void rotacion() {
 
     }
+
     public void rebalancear() {
 
     }
 
     @Override
-    public void enOrden(int dato) {
-
+    public void enOrden() {
+        if (nodoRaiz != null) {
+            nodoRaiz.recorrerNodo();
+        }
     }
 
     @Override
-    public void preOrden(int dato) {
-
+    public void postOrden() {
+        // Implementar recorrido postOrden
     }
 
     @Override
-    public void postOrden(int dato) {
-
+    public void preOrden() {
+        // Implementar recorrido preOrden
     }
 }
