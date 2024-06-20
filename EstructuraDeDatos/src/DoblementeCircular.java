@@ -1,6 +1,6 @@
 public class DoblementeCircular extends ListaEnlazada {
     public Object anterior() {
-        //
+        
         return null;
     }
 
