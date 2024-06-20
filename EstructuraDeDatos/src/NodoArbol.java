@@ -52,4 +52,24 @@ public class NodoArbol {
             nodoDerecho.recorrerNodo();
         }
     }
+
+    public void recorrerPreOrden() {
+        System.out.print(dato + " ");
+        if (nodoIzquierdo != null) {
+            nodoIzquierdo.recorrerPreOrden();
+        }
+        if (nodoDerecho != null) {
+            nodoDerecho.recorrerPreOrden();
+        }
+    }
+
+    public void recorrerPostOrden() {
+        if (nodoIzquierdo != null) {
+            nodoIzquierdo.recorrerPostOrden();
+        }
+        if (nodoDerecho != null) {
+            nodoDerecho.recorrerPostOrden();
+        }
+        System.out.print(dato + " ");
+    }
 }

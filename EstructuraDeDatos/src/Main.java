@@ -13,6 +13,11 @@ public class Main {
 
         System.out.println("Valores en el árbol en orden:");
         arbol.enOrden();
+        System.out.println("\nValores en el árbol en preorden:");
+        arbol.preOrden();
+        System.out.println("\nValores en el árbol en postorden:");
+        arbol.postOrden();
+
         scanner.close();
     }
 }
