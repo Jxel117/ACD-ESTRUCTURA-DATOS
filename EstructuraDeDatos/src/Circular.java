@@ -4,7 +4,7 @@ public class Circular extends ListaEnlazada {
     }
 
     public Object anterior() {
-        //
+        
         return null;
     }
 }
