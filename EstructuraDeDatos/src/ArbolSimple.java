@@ -1,17 +1,18 @@
-public class ArbolSimple extends Arbol{
-
+public class ArbolSimple extends Arbol {
     @Override
-    public void enOrden(int dato) {
-
+    public void enOrden() {
+        if (nodoRaiz != null) {
+            nodoRaiz.recorrerNodo();
+        }
     }
 
     @Override
-    public void preOrden(int dato) {
-
+    public void postOrden() {
+        // Implementar recorrido postOrden
     }
 
     @Override
-    public void postOrden(int dato) {
-
+    public void preOrden() {
+        // Implementar recorrido preOrden
     }
 }

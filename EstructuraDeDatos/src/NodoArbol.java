@@ -1,60 +1,55 @@
-public class NodoArbol extends Arbol{
-    @Override
-    public void enOrden(int dato) {
+public class NodoArbol {
+    public NodoArbol nodoIzquierdo;
+    public NodoArbol nodoDerecho;
+    public Object dato;
 
-    }
-    @Override
-    public void preOrden(int dato) {
-
-    }
-    @Override
-    public void postOrden(int dato) {
-
-    }
-
-    private Object nodoRaiz;
-    private NodoArbol nodoIzquierdo;
-    private NodoArbol nodoDerecho;
-    private Object dato;
-
-    // Constructor
     public NodoArbol(Object dato) {
         this.dato = dato;
-        this.nodoIzquierdo = null;
-        this.nodoDerecho = null;
     }
 
-    // Métodos
     public Object obtenerValor() {
-        return this.dato;
+        return dato;
     }
 
-    public void ingresarValor(Object dato) {
-        this.dato = dato;
+    public void ingresarValor(Object valor) {
+        if (valor.toString().compareTo(dato.toString()) < 0) {
+            if (nodoIzquierdo == null) {
+                nodoIzquierdo = new NodoArbol(valor);
+            } else {
+                nodoIzquierdo.ingresarValor(valor);
+            }
+        } else {
+            if (nodoDerecho == null) {
+                nodoDerecho = new NodoArbol(valor);
+            } else {
+                nodoDerecho.ingresarValor(valor);
+            }
+        }
     }
 
-    public void eliminarValor() {
-        this.dato = null;
+    public void eliminarValor(Object valor) {
+        // Implementar eliminación de valor en el árbol
+    }
+
+    public NodoArbol posicionNodo(Object valor) {
+        if (valor.equals(dato)) {
+            return this;
+        }
+        if (valor.toString().compareTo(dato.toString()) < 0 && nodoIzquierdo != null) {
+            return nodoIzquierdo.posicionNodo(valor);
+        } else if (nodoDerecho != null) {
+            return nodoDerecho.posicionNodo(valor);
+        }
+        return null;
     }
 
     public void recorrerNodo() {
-        // Implementación del recorrido del nodo
-    }
-
-    // Getters y setters para los nodos izquierdo y derecho
-    public NodoArbol getNodoIzquierdo() {
-        return nodoIzquierdo;
-    }
-
-    public void setNodoIzquierdo(NodoArbol nodoIzquierdo) {
-        this.nodoIzquierdo = nodoIzquierdo;
-    }
-
-    public NodoArbol getNodoDerecho() {
-        return nodoDerecho;
-    }
-
-    public void setNodoDerecho(NodoArbol nodoDerecho) {
-        this.nodoDerecho = nodoDerecho;
+        if (nodoIzquierdo != null) {
+            nodoIzquierdo.recorrerNodo();
+        }
+        System.out.print(dato + " ");
+        if (nodoDerecho != null) {
+            nodoDerecho.recorrerNodo();
+        }
     }
 }

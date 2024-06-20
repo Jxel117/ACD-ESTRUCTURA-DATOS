@@ -1,25 +1,28 @@
-public class ArbolAvl extends Arbol{
-    private String altura;
+public class ArbolAvl extends Arbol {
+    public String altura;
 
-    public void rotacion(){
-
-    }
-    public void rebalancear(){
+    public void rotacion() {
 
     }
 
-    @Override
-    public void enOrden(int dato) {
+    public void rebalancear() {
 
     }
 
     @Override
-    public void preOrden(int dato) {
+    public void enOrden() {
+        if (nodoRaiz != null) {
+            nodoRaiz.recorrerNodo();
+        }
+    }
+
+    @Override
+    public void postOrden() {
 
     }
 
     @Override
-    public void postOrden(int dato) {
+    public void preOrden() {
 
     }
 }
