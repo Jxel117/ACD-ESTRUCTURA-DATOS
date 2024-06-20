@@ -3,19 +3,19 @@ public class ArbolRojoNegro extends Arbol {
     public String altura;
 
     public void marcarNodoNegro() {
-
+        // Implementar marcar nodo negro
     }
 
     public void marcarNodoRojo() {
-
+        // Implementar marcar nodo rojo
     }
 
     public void rotacion() {
-
+        // Implementar rotación
     }
 
     public void rebalancear() {
-
+        // Implementar rebalanceo
     }
 
     @Override
@@ -27,11 +27,15 @@ public class ArbolRojoNegro extends Arbol {
 
     @Override
     public void postOrden() {
-        // Implementar recorrido postOrden
+        if (nodoRaiz != null) {
+            nodoRaiz.recorrerPostOrden();
+        }
     }
 
     @Override
     public void preOrden() {
-        // Implementar recorrido preOrden
+        if (nodoRaiz != null) {
+            nodoRaiz.recorrerPreOrden();
+        }
     }
 }
