@@ -11,6 +11,7 @@ Integrantes:
   <br>
 <summary>Ariel Tandazo
   <br>
+  
   ## UML
 <div align="center">
 <p><img src="https://raw.githubusercontent.com/Jxel117/ACD-ESTRUCTURA-DATOS/main/UML/UmlEstructuraDeDatos.png"><img><br>
